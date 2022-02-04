@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createToDoItem.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="toDo">
+        <form name="toDoForm">
+            <div class="container">
+                <h1>Create a new task</h1>
+                <hr>
+        
+                <label for="task"><b>What is to be done?</b></label>
+                <input type="text" placeholder="Enter task" name="task" required>
+
+                <label for="dueDate"><b>Due Date</b></label>
+                <input type="date" id="dueDate" name="dueDate" required>
+
+                <div>
+                    <b>Categories</b> <br><br>
+                    <label><input type="checkbox" name="category" style="margin-bottom:15px" value="Category 1">Category 1<br></label>
+                    <label><input type="checkbox" name="category" style="margin-bottom:15px" value="Category 2">Category 2<br></label>
+                    <label><input type="checkbox" name="category" style="margin-bottom:15px" value="Category 3">Category 3<br></label>
+                    <label><input type="checkbox" name="category" style="margin-bottom:15px" value="Category 4">category 4<br></label>
+                    <label><input type="checkbox" name="category" style="margin-bottom:15px" value="Category 5">Category 5<br></label>
+                </div><br>
+
+                <label>
+                    <input type="checkbox" name="reminder" value="reminder" id="reminder" style="margin-bottom:15px" onclick="addReminder()"> <b>Add a reminder</b>
+                </label>
+                <br><br>
+
+                <label for="reminderDate" id="reminderDateLabel"><b>Reminder Date</b></label>
+                <input type="date" id="reminderDate" name="reminderDate">
+
+                <label for="toDo Image"><b>Image</b></label>
+                <input type="file" id="toDoImage" name="toDoImage"><br>
+                <img src="" id="toDoImageDisplay" class="toDoImageDisplay" /><br><br>
+
+                <label>
+                    <input type="checkbox" name="toDoDone" id="toDoDone" style="margin-bottom:15px" > Mark as done
+                </label>
+                <br>
+            
+                <p id="ToDoItemValidationMessage" ></p>
+                <div class="clearfix">
+                    <button type="button" class="createToDoBtn" id="createToDoBtn" onclick="createToDo()"><b>Create</b></button>
+                    <button type="button" class="saveToDoBtn" id="saveToDoBtn" onclick="saveToDo()"><b>Save</b></button>
+                    <button type="button" class="editToDoBtn" id="editToDoBtn" onclick="editToDo()"><b>Edit</b></button>
+                    <button type="button" class="cancelCreateToDoBtn" id="cancelCreateToDoBtn" onclick="cancelCreateToDo()"><b>Cancel</b></button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="createToDoItem.js"></script>
+</body>
+</html>
